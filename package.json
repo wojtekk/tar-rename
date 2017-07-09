@@ -1,6 +1,6 @@
 {
   "name": "tar-rename",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rename directory inside tar/tgz/tar.gz file from old-prefix to new-prefix.",
   "main": "index.js",
   "scripts": {
