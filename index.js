@@ -15,6 +15,12 @@ module.exports = (opts) => {
     outputFile,
     replace,
   } = opts;
+
+  function escapeRegExp(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+  }
+  const oldPrefixRe = new RegExp(`^${escapeRegExp(oldPrefix)}`)
+
   return new Promise((resolve, reject) => {
     function error(message, code) {
       const err = new Error(message);
@@ -41,7 +47,7 @@ module.exports = (opts) => {
       });
 
       extract.on('entry', (header, stream, callback) => {
-        header.name = path.relative(oldPrefix, header.name);
+        header.name = header.name.replace(oldPrefixRe, newPrefix);
         stream.pipe(pack.entry(header, callback));
       });
 
