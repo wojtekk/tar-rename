@@ -1,0 +1,21 @@
+{
+  "name": "tar-rename",
+  "version": "1.0.0",
+  "description": "Rename directory inside tar/tgz/tar.gz file from old-prefix to new-prefix.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "bin": "./cli.js",
+  "author": "Wojciech Krawczyk <wojtekk@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wojtekk/tar-rename.git"
+  },
+  "dependencies": {
+    "colors": "1.1.2",
+    "minimist": "1.2.0",
+    "tar-stream": "1.5.4"
+  }
+}
