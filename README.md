@@ -3,7 +3,7 @@
 ```
 Usage: tar-rename old-prefix new-prefix --source file --output file [--help|--replace]
 
-Rename directory inside tar/tgz/tar.gz file from old-prefix to new-prefix.
+Rename directories (and files) inside tar/tgz/tar.gz file from old-prefix to new-prefix.
 
 Options:
   --help, -h     Show help
